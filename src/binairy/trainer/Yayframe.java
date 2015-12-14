@@ -55,7 +55,7 @@ public class Yayframe extends javax.swing.JFrame {
         lbl_1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        lst_log = new javax.swing.JList<>(Main.getLog());
+        ta_log = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Binary minigame");
@@ -164,14 +164,13 @@ public class Yayframe extends javax.swing.JFrame {
 
         jLabel6.setText("Log:");
 
-        jScrollPane1.setFont(new java.awt.Font("Arial Unicode MS", 0, 11)); // NOI18N
-
-        lst_log.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { " --Start Game--" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(lst_log);
+        ta_log.setEditable(false);
+        ta_log.setColumns(20);
+        ta_log.setRows(5);
+        ta_log.setText(" --Start Game--");
+        ta_log.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        ta_log.setSelectionColor(new java.awt.Color(153, 153, 153));
+        jScrollPane1.setViewportView(ta_log);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -243,8 +242,8 @@ public class Yayframe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(tf_current, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -402,7 +401,7 @@ public class Yayframe extends javax.swing.JFrame {
     }//GEN-LAST:event_but_128ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            Main.addLogEntry(tf_goal.getText());
+            ta_log.setText(ta_log.getText()+"\n Reached: "+tf_goal.getText()+" in "+tf_clicks.getText()+" clicks");
             tf_clicks.setText("0");
             tf_current.setText("0");
             but_1.setSelected(false);
@@ -486,7 +485,7 @@ public class Yayframe extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_4;
     private javax.swing.JLabel lbl_64;
     private javax.swing.JLabel lbl_8;
-    private javax.swing.JList<String> lst_log;
+    private javax.swing.JTextArea ta_log;
     private javax.swing.JTextField tf_clicks;
     private javax.swing.JTextField tf_current;
     private javax.swing.JTextField tf_goal;
