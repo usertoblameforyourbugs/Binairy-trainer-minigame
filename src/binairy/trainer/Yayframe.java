@@ -43,6 +43,15 @@ public class Yayframe extends javax.swing.JFrame {
         tf_current = new javax.swing.JTextField();
         tf_clicks = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        lbl_128 = new javax.swing.JLabel();
+        lbl_64 = new javax.swing.JLabel();
+        lbl_32 = new javax.swing.JLabel();
+        lbl_16 = new javax.swing.JLabel();
+        lbl_8 = new javax.swing.JLabel();
+        lbl_4 = new javax.swing.JLabel();
+        lbl_2 = new javax.swing.JLabel();
+        lbl_1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Binary minigame");
@@ -131,6 +140,24 @@ public class Yayframe extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
         jLabel4.setText("Made by Tycho Scholtze 2015");
 
+        jLabel5.setText("Binairy:");
+
+        lbl_128.setText("0");
+
+        lbl_64.setText("0");
+
+        lbl_32.setText("0");
+
+        lbl_16.setText("0");
+
+        lbl_8.setText("0");
+
+        lbl_4.setText("0");
+
+        lbl_2.setText("0");
+
+        lbl_1.setText("0");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -143,7 +170,25 @@ public class Yayframe extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_current))
+                                .addComponent(tf_current, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_128)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_64)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_32)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_16)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_1))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -181,10 +226,19 @@ public class Yayframe extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(tf_current, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_current, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(lbl_128)
+                    .addComponent(lbl_64)
+                    .addComponent(lbl_32)
+                    .addComponent(lbl_16)
+                    .addComponent(lbl_8)
+                    .addComponent(lbl_4)
+                    .addComponent(lbl_2)
+                    .addComponent(lbl_1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -204,7 +258,7 @@ public class Yayframe extends javax.swing.JFrame {
                     .addComponent(but_128))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
-                .addGap(5, 5, 5))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -214,10 +268,12 @@ public class Yayframe extends javax.swing.JFrame {
      tf_clicks.setText(Integer.toString(Integer.parseInt(tf_clicks.getText())+1));  
         if (but_1.isSelected())
         {
+            lbl_1.setText("1");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())+1));
         }
     else
         {
+            lbl_1.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-1));
         }
     }//GEN-LAST:event_but_1ActionPerformed
@@ -226,10 +282,12 @@ public class Yayframe extends javax.swing.JFrame {
      tf_clicks.setText(Integer.toString(Integer.parseInt(tf_clicks.getText())+1));
         if (but_2.isSelected())
         {
+            lbl_2.setText("1");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())+2));
         }
     else
         {
+            lbl_2.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-2));
         }
     }//GEN-LAST:event_but_2ActionPerformed
@@ -238,10 +296,12 @@ public class Yayframe extends javax.swing.JFrame {
      tf_clicks.setText(Integer.toString(Integer.parseInt(tf_clicks.getText())+1));
         if (but_4.isSelected())
         {
+            lbl_4.setText("1");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())+4));
         }
     else
         {
+            lbl_4.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-4));
         }        // TODO add your handling code here:
     }//GEN-LAST:event_but_4ActionPerformed
@@ -250,10 +310,12 @@ public class Yayframe extends javax.swing.JFrame {
     tf_clicks.setText(Integer.toString(Integer.parseInt(tf_clicks.getText())+1)); 
         if (but_8.isSelected())
         {
+            lbl_8.setText("1");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())+8));
         }
     else
         {
+            lbl_8.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-8));
         }        // TODO add your handling code here:
     }//GEN-LAST:event_but_8ActionPerformed
@@ -262,10 +324,12 @@ public class Yayframe extends javax.swing.JFrame {
      tf_clicks.setText(Integer.toString(Integer.parseInt(tf_clicks.getText())+1));
         if (but_16.isSelected())
         {
+            lbl_16.setText("1");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())+16));
         }
     else
         {
+            lbl_16.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-16));
         }        // TODO add your handling code here:
     }//GEN-LAST:event_but_16ActionPerformed
@@ -274,10 +338,12 @@ public class Yayframe extends javax.swing.JFrame {
      tf_clicks.setText(Integer.toString(Integer.parseInt(tf_clicks.getText())+1));
         if (but_32.isSelected())
         {
+            lbl_32.setText("1");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())+32));
         }
     else
         {
+            lbl_32.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-32));
         }        // TODO add your handling code here:
     }//GEN-LAST:event_but_32ActionPerformed
@@ -286,10 +352,12 @@ public class Yayframe extends javax.swing.JFrame {
      tf_clicks.setText(Integer.toString(Integer.parseInt(tf_clicks.getText())+1));
         if (but_64.isSelected())
         {
+            lbl_64.setText("1");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())+64));
         }
     else
         {
+            lbl_64.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-64));
         }        // TODO add your handling code here:
     }//GEN-LAST:event_but_64ActionPerformed
@@ -298,10 +366,12 @@ public class Yayframe extends javax.swing.JFrame {
     tf_clicks.setText(Integer.toString(Integer.parseInt(tf_clicks.getText())+1));
         if (but_128.isSelected())
         {
+            lbl_128.setText("1");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())+128));
         }
     else
         {
+            lbl_128.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-128));
         }
     }//GEN-LAST:event_but_128ActionPerformed
@@ -318,6 +388,14 @@ public class Yayframe extends javax.swing.JFrame {
             but_32.setSelected(false);
             but_64.setSelected(false);
             but_128.setSelected(false);
+            lbl_1.setText("0");
+            lbl_2.setText("0");
+            lbl_4.setText("0");
+            lbl_8.setText("0");
+            lbl_16.setText("0");
+            lbl_32.setText("0");
+            lbl_64.setText("0");
+            lbl_128.setText("0");
             tf_goal.setText(Integer.toString(ThreadLocalRandom.current().nextInt(0, 256)));
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -372,6 +450,15 @@ public class Yayframe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel lbl_1;
+    private javax.swing.JLabel lbl_128;
+    private javax.swing.JLabel lbl_16;
+    private javax.swing.JLabel lbl_2;
+    private javax.swing.JLabel lbl_32;
+    private javax.swing.JLabel lbl_4;
+    private javax.swing.JLabel lbl_64;
+    private javax.swing.JLabel lbl_8;
     private javax.swing.JTextField tf_clicks;
     private javax.swing.JTextField tf_current;
     private javax.swing.JTextField tf_goal;
