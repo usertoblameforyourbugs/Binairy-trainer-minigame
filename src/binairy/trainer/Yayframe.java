@@ -276,6 +276,7 @@ public class Yayframe extends javax.swing.JFrame {
             lbl_1.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-1));
         }
+        jButton1.setEnabled(tf_goal.getText().equals(tf_current.getText()));
     }//GEN-LAST:event_but_1ActionPerformed
 
     private void but_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_2ActionPerformed
@@ -290,6 +291,7 @@ public class Yayframe extends javax.swing.JFrame {
             lbl_2.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-2));
         }
+        jButton1.setEnabled(tf_goal.getText().equals(tf_current.getText()));
     }//GEN-LAST:event_but_2ActionPerformed
 
     private void but_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_4ActionPerformed
@@ -304,6 +306,7 @@ public class Yayframe extends javax.swing.JFrame {
             lbl_4.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-4));
         }        // TODO add your handling code here:
+        jButton1.setEnabled(tf_goal.getText().equals(tf_current.getText()));
     }//GEN-LAST:event_but_4ActionPerformed
 
     private void but_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_8ActionPerformed
@@ -318,6 +321,7 @@ public class Yayframe extends javax.swing.JFrame {
             lbl_8.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-8));
         }        // TODO add your handling code here:
+        jButton1.setEnabled(tf_goal.getText().equals(tf_current.getText()));
     }//GEN-LAST:event_but_8ActionPerformed
 
     private void but_16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_16ActionPerformed
@@ -332,6 +336,7 @@ public class Yayframe extends javax.swing.JFrame {
             lbl_16.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-16));
         }        // TODO add your handling code here:
+        jButton1.setEnabled(tf_goal.getText().equals(tf_current.getText()));
     }//GEN-LAST:event_but_16ActionPerformed
 
     private void but_32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_32ActionPerformed
@@ -346,6 +351,7 @@ public class Yayframe extends javax.swing.JFrame {
             lbl_32.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-32));
         }        // TODO add your handling code here:
+        jButton1.setEnabled(tf_goal.getText().equals(tf_current.getText()));
     }//GEN-LAST:event_but_32ActionPerformed
 
     private void but_64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_64ActionPerformed
@@ -360,6 +366,7 @@ public class Yayframe extends javax.swing.JFrame {
             lbl_64.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-64));
         }        // TODO add your handling code here:
+        jButton1.setEnabled(tf_goal.getText().equals(tf_current.getText()));
     }//GEN-LAST:event_but_64ActionPerformed
 
     private void but_128ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_128ActionPerformed
@@ -374,10 +381,10 @@ public class Yayframe extends javax.swing.JFrame {
             lbl_128.setText("0");
             tf_current.setText(Integer.toString(Integer.parseInt(tf_current.getText())-128));
         }
+       jButton1.setEnabled(tf_goal.getText().equals(tf_current.getText()));
     }//GEN-LAST:event_but_128ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
             tf_clicks.setText("0");
             tf_current.setText("0");
             but_1.setSelected(false);
@@ -397,7 +404,7 @@ public class Yayframe extends javax.swing.JFrame {
             lbl_64.setText("0");
             lbl_128.setText("0");
             tf_goal.setText(Integer.toString(ThreadLocalRandom.current().nextInt(0, 256)));
-
+            jButton1.setEnabled(tf_goal.getText().equals(tf_current.getText()));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
