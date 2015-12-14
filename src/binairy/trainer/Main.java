@@ -5,6 +5,8 @@
  */
 package binairy.trainer;
 
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author Tycho
@@ -14,9 +16,19 @@ public class Main {
     /**
      * @param args the command line arguments
      */
+    private static DefaultListModel listModel;
     public static void main(String[] args) {
+        listModel = new DefaultListModel();
         Yayframe frame = new Yayframe();
         frame.setVisible(true);
+    }
+    
+    public static void addLogEntry(String NewEntry){
+        listModel.addElement(NewEntry);
+    }
+    
+    public static DefaultListModel getLog(){
+        return listModel;
     }
     
 }
