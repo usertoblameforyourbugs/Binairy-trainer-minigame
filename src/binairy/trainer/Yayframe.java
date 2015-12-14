@@ -138,7 +138,7 @@ public class Yayframe extends javax.swing.JFrame {
         tf_clicks.setText("0");
 
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setText("Made by Tycho Scholtze 2015");
+        jLabel4.setText("Made by Tycho Scholtze, 2015");
 
         jLabel5.setText("Binairy:");
 
